@@ -10,7 +10,7 @@ def graphic(currencies:int):
         case=coins**2
         if_cases.append(case)
         xlabel.append(coins)        
-        print(index,if_cases[-1],"combinations")
+        print(xlabel[-1],if_cases[-1],"combinations")
     
     fig,ax = plt.subplots()
     ax.plot(xlabel,if_cases)
