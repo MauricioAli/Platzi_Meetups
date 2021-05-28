@@ -1,17 +1,16 @@
-
 currencies ={
-        1:{'value':3641,'name':"pesos"},
+        1:{'value':3641,'name':"pesos colombia"},
         2:{'value':1,'name':'dolares'},
         3:{'value':0.7198,'name':'libras'},
-        4:{'value':0.8472,'name':'Euros'}
+        4:{'value':0.8472,'name':'Euros'},
+        5:{'value':0.383038,'name':'Yuan'}
 }
-
 
 def converter(input_coin: int,output_coin: int,amount: float,name: str)-> str:
 
     conversion = (currencies[output_coin]['value']*amount)/currencies[input_coin]['value']
-    request = "{} {} {} es equivalente a {} {}".format(name,amount,currencies[input_coin]['name'],conversion,currencies[output_coin]['name'])
-    return request
+    response = "{} {} {} es equivalente a {} {}".format(name,amount,currencies[input_coin]['name'],conversion,currencies[output_coin]['name'])
+    return response
 
 def main():
     print('bienvenido a MYTRM el programa que ayudará a saber el cambio de divisa internacional ')
@@ -26,5 +25,3 @@ def main():
 if __name__ == "__main__":
     
     main()
-    
-   
